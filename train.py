@@ -7,22 +7,33 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import Input, Dense, Flatten
 from tensorflow.keras.models import Model
 
+@gin.configurable
+class Trainer(object):
+    @gin.configurable
+    def __init__(self, args,
+                optimizer = None,
+                 loss=None,
+                 metrics=None,
+                 batch_size=None,
+                 epochs=None):
+        self.optimizer = optimizer
+        self.loss = loss
+        self.metrics = metrics
+        self.batch_size = batch_size
+        self.epochs = epochs
+
 def set_up_vars():
     activations = ['relu', 'softmax']
     num_hidden_nodes = [256,128,64,20]
-    optimizer=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
-    loss ='mean_squared_error'
-    metrics=['accuracy']
-    epochs=100
-    batch_size=32
     
-    return activations, num_hidden_nodes, optimizer, loss, metrics, epochs, batch_size
+    return activations, num_hidden_nodes
 
 def main(train_obs, train_act, valid_obs, valid_act, args):
+    trainer = Trainer(args)
     print("---------CREATING MODEL--------")
     
     #get the training data and validation data
-    activations, num_hidden_nodes, optimizer, loss, metrics, epochs, batch_size = set_up_vars()
+    activations, num_hidden_nodes = set_up_vars()
      
     # creating layers for model and linking them
     input_layer = Input(shape=(len(train_obs[0]),))
@@ -34,16 +45,17 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
     model = Model(inputs=input_layer, outputs=output_layer)
 
     # compiling model
-    model.compile(optimizer=optimizer,
-            loss=loss,
-            metrics=metrics)
+    model.compile(
+        optimizer = trainer.optimizer,
+        loss = trainer.loss,
+        metrics = trainer.metrics)
 
     print("----------TRAINING MODEL---------")
     # training model
-    tr_history = model.fit(train_obs,train_act,
-            epochs=epochs,
-            verbose=1,
-            validation_data=(valid_obs, valid_act))
+    tr_history = model.fit(train_obs, train_act,
+            epochs = trainer.epochs,
+            verbose = 1,
+            validation_data=(valid_obs,valid_act))
 
     return model
 
