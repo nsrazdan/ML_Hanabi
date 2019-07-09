@@ -1,4 +1,4 @@
-# Install script for directory: /data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib
+# Install script for directory: /data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

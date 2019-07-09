@@ -1,4 +1,4 @@
-# Install script for directory: /data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env
+# Install script for directory: /data1/huyen29/ML_Hanabi/hanabi-env
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/cmake_install.cmake")
+  include("/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/data1/huyen29/ML_Hanabi/hanabi-env/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

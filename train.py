@@ -2,6 +2,7 @@ from utils import parse_args
 import importlib
 import load_data
 import gin
+import build_model
 import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import Input, Dense, Flatten
@@ -32,6 +33,7 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
     trainer = Trainer(args)
     print("---------CREATING MODEL--------")
     
+    '''
     #get the training data and validation data
     activations, num_hidden_nodes = set_up_vars()
      
@@ -43,6 +45,8 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
     flatten_layer = Flatten()(hidden_layer)
     output_layer = Dense(num_hidden_nodes[len(num_hidden_nodes)-1], activation = activations[len(activations)-1])(flatten_layer)
     model = Model(inputs=input_layer, outputs=output_layer)
+    '''
+    model = build_model.build_model()
 
     # compiling model
     model.compile(

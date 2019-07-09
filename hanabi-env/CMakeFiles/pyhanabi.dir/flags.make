@@ -6,5 +6,5 @@ CXX_FLAGS = -O2 -std=c++11 -fPIC -fPIC
 
 CXX_DEFINES = -Dpyhanabi_EXPORTS
 
-CXX_INCLUDES = -I/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib 
+CXX_INCLUDES = -I/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib 
 

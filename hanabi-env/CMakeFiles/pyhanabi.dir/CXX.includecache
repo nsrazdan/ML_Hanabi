@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/canonical_encoders.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/canonical_encoders.h
 vector
 -
 hanabi_game.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_game.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_game.h
 hanabi_observation.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_observation.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_observation.h
 observation_encoder.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/observation_encoder.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/observation_encoder.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 string
 -
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_game.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_game.h
 random
 -
 string
@@ -30,11 +30,11 @@ unordered_map
 vector
 -
 hanabi_card.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 hanabi_move.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_hand.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_hand.h
 cstdint
 -
 string
@@ -42,41 +42,41 @@ string
 vector
 -
 hanabi_card.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_history_item.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_history_item.h
 cstdint
 -
 string
 -
 hanabi_move.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 cstdint
 -
 string
 -
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_observation.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_observation.h
 string
 -
 vector
 -
 hanabi_card.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 hanabi_game.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_game.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_game.h
 hanabi_hand.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_hand.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_hand.h
 hanabi_history_item.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_history_item.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_history_item.h
 hanabi_move.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 hanabi_state.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_state.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_state.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_state.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_state.h
 random
 -
 string
@@ -84,23 +84,23 @@ string
 vector
 -
 hanabi_card.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 hanabi_game.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_game.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_game.h
 hanabi_hand.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_hand.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_hand.h
 hanabi_history_item.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_history_item.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_history_item.h
 hanabi_move.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/observation_encoder.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/observation_encoder.h
 vector
 -
 hanabi_observation.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_observation.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_observation.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/util.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/util.h
 cassert
 -
 cstdlib
@@ -110,9 +110,9 @@ string
 unordered_map
 -
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/pyhanabi.cc
+/data1/huyen29/ML_Hanabi/hanabi-env/pyhanabi.cc
 pyhanabi.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/pyhanabi.h
+/data1/huyen29/ML_Hanabi/hanabi-env/pyhanabi.h
 cstdlib
 -
 cstring
@@ -126,23 +126,23 @@ string
 unordered_map
 -
 hanabi_lib/canonical_encoders.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/canonical_encoders.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/canonical_encoders.h
 hanabi_lib/hanabi_card.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_card.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_card.h
 hanabi_lib/hanabi_game.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_game.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_game.h
 hanabi_lib/hanabi_history_item.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_history_item.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_history_item.h
 hanabi_lib/hanabi_move.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_move.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_move.h
 hanabi_lib/hanabi_observation.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_observation.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_observation.h
 hanabi_lib/hanabi_state.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/hanabi_state.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/hanabi_state.h
 hanabi_lib/observation_encoder.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/observation_encoder.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/observation_encoder.h
 hanabi_lib/util.h
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/hanabi_lib/util.h
+/data1/huyen29/ML_Hanabi/hanabi-env/hanabi_lib/util.h
 
-/data1/nrazdan/ganabi-Huyen-Nikhil/hanabi-env/pyhanabi.h
+/data1/huyen29/ML_Hanabi/hanabi-env/pyhanabi.h
 
