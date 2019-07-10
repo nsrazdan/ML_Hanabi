@@ -4,12 +4,22 @@ from keras.optimizers import Adam
 from tensorflow.keras.layers import Input, Dense, Flatten
 from tensorflow.keras.models import Model
 
+def print_info(obs_size, num_hidden_nodes, hidden_activation, out_layer_nodes, out_activation):
+    print("----------CREATING MODEL----------")
+    print("num_hidden_nodes = ", num_hidden_nodes)
+    print("hidden_actiavtion = ", hidden_activation)
+    print("out_layer_nodes = ", out_layer_nodes)
+    print("out_actiavtion = ", out_activation)
+
 @gin.configurable
 def build_model(obs_size=None, 
         num_hidden_nodes=None,
         hidden_activation=None,
         out_layer_nodes=None,
         out_activation=None):
+
+    # printing out building model info
+    print_info(obs_size, num_hidden_nodes, hidden_activation, out_layer_nodes, out_activation)
     #setting up input layer
     input_layer = Input(shape=(obs_size,))
 

@@ -52,9 +52,9 @@ def one_hot_vectorized_action(agent, num_moves, obs):
 class Dataset(object):
     @gin.configurable
     def __init__(self, args,
-            game_type='Hanabi-Full',
-            num_players=2,
-            num_unique_agents=6,
+            game_type=None,
+            num_players=None,
+            num_unique_agents=None,
             num_games=None):
         
         self.game_type = game_type

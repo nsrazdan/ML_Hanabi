@@ -24,7 +24,7 @@ keras.optimizers.Adam.amsgrad=True
 # configure trainer vars
 train.Trainer.loss = 'categorical_crossentropy'
 train.Trainer.metrics = ['accuracy']
-train.Trainer.batch_size = 32
+train.Trainer.batch_size = 1
 train.Trainer.epochs = 10
 train.Trainer.steps_per_epoch = 1
 train.Trainer.validation_steps = 1

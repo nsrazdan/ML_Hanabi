@@ -25,12 +25,30 @@ class Trainer(object):
         self.steps_per_epoch = steps_per_epoch
         self.validation_steps = validation_steps
 
+def print_info(trainer):
+    print("----------TRAINING MODEL---------")
+    print("optimizer = ", trainer.optimizer)
+    print("optimizer learning rate = ", trainer.optimizer.lr)
+    print("optimizer beta_1 = ", trainer.optimizer.beta_1)
+    print("optimizer beta_2 = ", trainer.optimizer.beta_2)
+    print("optimizer epsilon = ", trainer.optimizer.epsilon)
+    print("optimizer decay = ", trainer.optimizer.decay)
+    print("optimizer amsgrad = ", trainer.optimizer.amsgrad)
+    print("loss = ", trainer.loss)
+    print("metrics = ", trainer.metrics)
+    print("batch_size = ", trainer.batch_size)
+    print('epochs = ', trainer.epochs)
+    print('steps_per_epoch = ', trainer.steps_per_epoch)
+    print('validation_steps = ', trainer.validation_steps)
+
+
 def main(train_obs, train_act, valid_obs, valid_act, args):
-    trainer = Trainer(args)
-    print("---------CREATING MODEL--------")
-   
+    trainer = Trainer(args) 
     #creating model
     model = build_model.build_model()
+    
+    # printing training info
+    print_info(trainer)
 
     # compiling model
     model.compile(
@@ -38,7 +56,6 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
         loss = trainer.loss,
         metrics = trainer.metrics)
 
-    print("----------TRAINING MODEL---------")
     # training model
     tr_history = model.fit(train_obs, train_act,
             epochs = trainer.epochs,
