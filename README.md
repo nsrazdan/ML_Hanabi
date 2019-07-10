@@ -1,6 +1,8 @@
 # ML_Hanabi
 Machine Learning solution to the cooperative, imperfect-information game Hanabi
 
+Currently only implemented as naive MLP in master, but will create branches for different models
+
 The create_data script is written in Python 2. # hardcoded creates data for 1 random agent in pool of unique agents
 
 To run create_data in Keystone shell:
