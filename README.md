@@ -8,7 +8,7 @@ The create_data script is written in Python 2. # hardcoded creates data for 1 ra
 To run create_data in Keystone shell:
 ```
 fork/clone repo into your home folder
-cd ~/ganabi/hanabi-env
+cd ~/ML_Hanabi/hanabi-env
 cmake .
 make
 cd ..
