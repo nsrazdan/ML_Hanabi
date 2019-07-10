@@ -55,7 +55,7 @@ class Dataset(object):
             self.test_data[agent] = raw_data[agent][len(raw_data[agent])-100:]
 
     @gin.configurable
-    def generator(self, batch_type='train', shuffle='false',agent='rainbow_agent_1'):
+    def generator(self, batch_type='train', shuffle='false',agent=None):
         NUM_ADHOC_GAMES = self.num_games
         if batch_type == 'train':
             data_bank = self.train_data
