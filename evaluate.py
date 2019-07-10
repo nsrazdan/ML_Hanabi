@@ -4,7 +4,7 @@ def main(model, test_obs, test_act, test_agent):
     # display metrics, save results
     print("---------TESTING MODEL---------")
     print("Testing on " + test_agent)
-    model.evaluate(test_obs, test_act)
+    model.evaluate(test_obs, test_act, steps = 100)
 
 if __name__ == "__main__":
     main(model, test_obs, test_act, test_agent)
