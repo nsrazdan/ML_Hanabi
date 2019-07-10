@@ -172,7 +172,7 @@ def main(args):
             data_creator.num_unique_agents,
             data_creator.num_games)
 
-    raw_data = data_creator.create_one_agent_data()
+    raw_data = data_creator.create_data()
     pickle.dump(raw_data, open(args.datapath, "wb"))
 
 if __name__ == '__main__':

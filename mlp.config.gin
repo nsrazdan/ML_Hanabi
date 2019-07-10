@@ -2,7 +2,7 @@
 import load_data
 import train
 import build_model
- 
+
 # one batch includes:
     # BATCH_SIZE * num_adhoc_games
     # BATCH_SIZE *
@@ -16,7 +16,7 @@ Dataset.num_players = 2
 Dataset.num_unique_agents = 1
 Dataset.num_games = 10
 
-
+load_data.generator.agent='rainbow_agent_1'
 # configure the trainer
 train.Trainer.optimizer = @tensorflow.keras.optimizers.Adam()
 tensorflow.keras.optimizers.Adam.lr=0.001
@@ -30,7 +30,6 @@ train.Trainer.loss = @tensorflow.keras.losses.mean_squared_error
 train.Trainer.metrics = ['accuracy']
 train.Trainer.batch_size = 32
 train.Trainer.epochs = 100
-
 
 # configure the network
 build_model.build_model.obs_size = 658

@@ -18,11 +18,12 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #CONST VARIABLES
 DATAPATH = os.path.dirname(os.path.realpath(__file__))
 
+@gin.configurable
 def initialize_data(args):
     data = load_data.main(args)
-    train_obs, train_act = data.generator('train')
-    valid_obs, valid_act  = data.generator('validation')
-    test_obs, test_act = data.generator('test')
+    train_obs, train_act = data.generator(batch_type='train')
+    valid_obs, valid_act  = data.generator(batch_type='validation')
+    test_obs, test_act = data.generator(batch_type='test')
 
     return train_obs, train_act, valid_obs, valid_act, test_obs, test_act
 
