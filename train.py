@@ -23,29 +23,11 @@ class Trainer(object):
         self.batch_size = batch_size
         self.epochs = epochs
 
-def set_up_vars():
-    activations = ['relu', 'softmax']
-    num_hidden_nodes = [256,128,64,20]
-    
-    return activations, num_hidden_nodes
-
 def main(train_obs, train_act, valid_obs, valid_act, args):
     trainer = Trainer(args)
     print("---------CREATING MODEL--------")
-    
-    '''
-    #get the training data and validation data
-    activations, num_hidden_nodes = set_up_vars()
-     
-    # creating layers for model and linking them
-    input_layer = Input(shape=(len(train_obs[0]),))
-    hidden_layer = Dense(num_hidden_nodes[0], activation=activations[0])(input_layer)
-    for i in range(1,len(num_hidden_nodes)-1):
-        hidden_layer = Dense(num_hidden_nodes[i], activation=activations[0])(hidden_layer)
-    flatten_layer = Flatten()(hidden_layer)
-    output_layer = Dense(num_hidden_nodes[len(num_hidden_nodes)-1], activation = activations[len(activations)-1])(flatten_layer)
-    model = Model(inputs=input_layer, outputs=output_layer)
-    '''
+   
+    #creating model
     model = build_model.build_model()
 
     # compiling model
