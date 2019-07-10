@@ -28,11 +28,12 @@ class Dataset(object):
         self.num_players = num_players
         self.num_unique_agents = num_unique_agents
         self.num_games = num_games
-
+        
         self.train_data = {} # gameplay data given to model
         self.validation_data = {} # data not given to model, from same agents as train
         self.test_data = {} # data from agents totally unseen to model
-        
+        self.test_agent = None
+
     def read(self, raw_data):
         # split up raw_data into train, validation, and test
         #test_agent = random.choice(list(raw_data.keys()))
@@ -63,7 +64,8 @@ class Dataset(object):
         elif batch_type == 'test':
             data_bank = self.test_data
             NUM_ADHOC_GAMES = 100
-       
+        
+        self.test_agent = agent
         # data_bank: [AgentName][num_games][0 = 
         #         obs_vec, 1 = act_vec][game_step][index into vec]
         #List of all agents. We chose randomely 1 agent

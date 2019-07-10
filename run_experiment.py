@@ -25,7 +25,7 @@ def initialize_data(args):
     valid_obs, valid_act  = data.generator(batch_type='validation')
     test_obs, test_act = data.generator(batch_type='test')
 
-    return train_obs, train_act, valid_obs, valid_act, test_obs, test_act
+    return train_obs, train_act, valid_obs, valid_act, test_obs, test_act, data.test_agent
 
 def main():
     #parse arguments
@@ -42,9 +42,9 @@ def main():
     '''
     - data: a reference to the Dataset object (refer to load_data.py)
      '''
-    train_obs, train_act, valid_obs, valid_act, test_obs, test_act = initialize_data(args)
+    train_obs, train_act, valid_obs, valid_act, test_obs, test_act, test_agent = initialize_data(args)
     model = train.main(train_obs, train_act, valid_obs, valid_act, args)
-    evaluate.main(model,test_obs, test_act)
+    evaluate.main(model,test_obs, test_act, test_agent)
 
 if __name__ == "__main__":
     main()

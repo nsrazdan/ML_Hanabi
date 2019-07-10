@@ -16,7 +16,7 @@ Dataset.num_players = 2
 Dataset.num_unique_agents = 1
 Dataset.num_games = 10
 
-load_data.generator.agent='rainbow_agent_1'
+load_data.generator.agent='rainbow_agent_2'
 # configure the trainer
 train.Trainer.optimizer = @tensorflow.keras.optimizers.Adam()
 tensorflow.keras.optimizers.Adam.lr=0.001
