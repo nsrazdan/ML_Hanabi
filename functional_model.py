@@ -36,23 +36,3 @@ class Naive_MLP(object):
         output_layer = Dense(num_hidden_nodes[len(num_hidden_nodes)-1], activations = activations[len(activations)-1])
         model = Model(inputs=input_layer, outputs=output_layer)
         return model
-
-    '''train the model we just created'''
-    def train_model(self, optimizer=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False), 
-            loss ='sparse_categorical_crossentropy',
-            metrics=['accuracy'],
-            epochs=10,
-            batch_size=10):
-        
-        #obtain input and output layer to create the model
-        model = self.create_model
-        model.compile(optimizer=optimizer,
-                loss=loss,
-                metrics=metrics)
-        tr_history = model.fit(self.train_obs, self.train_act,
-                batch_size=batch_size,
-                epochs=epochs,
-                verbose=1,
-                validation_data=(self.valid_obs,self.valid_act),
-                shuffle = True)
-        return model
