@@ -55,7 +55,7 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
         optimizer = trainer.optimizer,
         loss = trainer.loss,
         metrics = trainer.metrics)
-
+    
     # training model
     tr_history = model.fit(train_obs, train_act,
             epochs = trainer.epochs,

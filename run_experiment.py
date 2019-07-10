@@ -7,8 +7,6 @@ import train
 import evaluate
 import gin
 from utils import parse_args, dir_utils
-from tensorflow.keras.layers import Input, Dense, Flatten
-from tensorflow.keras.models import Model
 
 # getting rid of "does not support AVX" warnings and info logs
 logging.getLogger('tensorflow').disabled = True
@@ -35,7 +33,6 @@ def main():
 
     # external configuration
     gin.external_configurable(tf.keras.optimizers.Adam, module='tensorflow.keras.optimizers')
-    gin.external_configurable(tf.keras.losses.mean_squared_error, module='tensorflow.keras.losses')
     gin.parse_config_file('mlp.config.gin')
 
     # get data, train model, then test model

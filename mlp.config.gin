@@ -18,8 +18,8 @@ keras.optimizers.Adam.lr=0.001
 keras.optimizers.Adam.beta_1=0.9
 keras.optimizers.Adam.beta_2=0.999
 keras.optimizers.Adam.epsilon=None
-keras.optimizers.Adam.decay=0.0
-keras.optimizers.Adam.amsgrad=True
+keras.optimizers.Adam.decay=0.05
+keras.optimizers.Adam.amsgrad=False
 
 # configure trainer vars
 train.Trainer.loss = 'categorical_crossentropy'
@@ -31,10 +31,11 @@ train.Trainer.validation_steps = 1
 
 # configure the network
 build_model.build_model.obs_size = 658
-build_model.build_model.num_hidden_nodes = [256,128,64]
+build_model.build_model.num_hidden_nodes = [560,480,320.256,128,64]
 build_model.build_model.hidden_activation = 'relu'
 build_model.build_model.out_layer_nodes = 20
 build_model.build_model.out_activation = 'softmax'
+build_model.build_model.dropout_rate = 0.2
 
 
 # TODO: configure the evaluator

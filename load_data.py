@@ -49,9 +49,10 @@ class Dataset(object):
         self.test_data[test_agent] = raw_data[test_agent]
         '''
         for agent in raw_data:
-            split_idx = int(0.9 * (len(raw_data[agent])-100))
-            self.train_data[agent] = raw_data[agent][:split_idx]
-            self.validation_data[agent] = raw_data[agent][split_idx:]
+            split_idx1 = int(0.8 * (len(raw_data[agent])-100))
+            self.train_data[agent] = raw_data[agent][:split_idx1]
+            split_idx2 = split_idx1 + int(0.2 * (len(raw_data[agent])-100))
+            self.validation_data[agent] = raw_data[agent][split_idx1:split_idx2]
             self.test_data[agent] = raw_data[agent][len(raw_data[agent])-100:]
 
     @gin.configurable
