@@ -32,6 +32,7 @@ def main():
     args.datapath = DATAPATH + "/data/Hanabi-Full_2_6_150.pkl"
     args = parse_args.resolve_datapath(args)
 
+    #external configuration
     gin.external_configurable(tf.keras.optimizers.Adam, module='tensorflow.keras.optimizers')
     gin.external_configurable(tf.keras.losses.mean_squared_error, module='tensorflow.keras.losses')
     gin.parse_config_file('mlp.config.gin')

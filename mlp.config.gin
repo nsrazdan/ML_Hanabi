@@ -1,4 +1,5 @@
 #import create_data
+import load_data
 import train
 import build_model
  
@@ -10,15 +11,20 @@ import build_model
 
 
 # configure the data creator/loader
-#__main__.Dataset.game_type = 'Hanabi-Full'
-#__main__.Dataset.num_players = 2
-#__main__.Dataset.num_unique_agents = 1
-#__main__.Dataset.num_games = 10
+Dataset.game_type = 'Hanabi-Full'
+Dataset.num_players = 2
+Dataset.num_unique_agents = 1
+Dataset.num_games = 10
 
 
 # configure the trainer
 train.Trainer.optimizer = @tensorflow.keras.optimizers.Adam()
-#lr=0.001,beta_1=0.9,beta_2=0.999,epsilon=None,decay=0.0,amsgrad=False).
+tensorflow.keras.optimizers.Adam.lr=0.001
+tensorflow.keras.optimizers.Adam.beta_1=0.9
+tensorflow.keras.optimizers.Adam.beta_2=0.999
+tensorflow.keras.optimizers.Adam.epsilon=None
+tensorflow.keras.optimizers.Adam.decay=0.0
+tensorflow.keras.optimizers.Adam.amsgrad=False
 
 train.Trainer.loss = @tensorflow.keras.losses.mean_squared_error
 train.Trainer.metrics = ['accuracy']
