@@ -4,9 +4,7 @@ import load_data
 import gin
 import build_model
 import tensorflow as tf
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.layers import Input, Dense, Flatten
-from tensorflow.keras.models import Model
+from keras import losses
 
 @gin.configurable
 class Trainer(object):

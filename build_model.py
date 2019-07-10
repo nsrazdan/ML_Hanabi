@@ -1,6 +1,6 @@
 import tensorflow as tf
 import gin
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 from tensorflow.keras.layers import Input, Dense, Flatten
 from tensorflow.keras.models import Model
 

@@ -1,4 +1,4 @@
-#import create_data
+import create_data
 import load_data
 import train
 import build_model
@@ -11,22 +11,23 @@ import build_model
 
 
 # configure the data creator/loader
-Dataset.game_type = 'Hanabi-Full'
-Dataset.num_players = 2
-Dataset.num_unique_agents = 1
-Dataset.num_games = 10
+load_data.Dataset.game_type = 'Hanabi-Full'
+load_data.Dataset.num_players = 2
+load_data.Dataset.num_unique_agents = 1
+load_data.Dataset.num_games = 10
 
-load_data.generator.agent='rainbow_agent_2'
+load_data.generator.agent='rainbow_agent_6'
+
 # configure the trainer
-train.Trainer.optimizer = @tensorflow.keras.optimizers.Adam()
-tensorflow.keras.optimizers.Adam.lr=0.001
-tensorflow.keras.optimizers.Adam.beta_1=0.9
-tensorflow.keras.optimizers.Adam.beta_2=0.999
-tensorflow.keras.optimizers.Adam.epsilon=None
-tensorflow.keras.optimizers.Adam.decay=0.0
-tensorflow.keras.optimizers.Adam.amsgrad=False
+train.Trainer.optimizer = @keras.optimizers.Adam()
+keras.optimizers.Adam.lr=0.001
+keras.optimizers.Adam.beta_1=0.9
+keras.optimizers.Adam.beta_2=0.999
+keras.optimizers.Adam.epsilon=None
+keras.optimizers.Adam.decay=0.0
+keras.optimizers.Adam.amsgrad=True
 
-train.Trainer.loss = @tensorflow.keras.losses.mean_squared_error
+train.Trainer.loss = 'categorical_crossentropy'
 train.Trainer.metrics = ['accuracy']
 train.Trainer.batch_size = 32
 train.Trainer.epochs = 100
