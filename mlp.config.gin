@@ -3,22 +3,16 @@ import load_data
 import train
 import build_model
 
-# one batch includes:
-    # BATCH_SIZE * num_adhoc_games
-    # BATCH_SIZE *
-    # BATCH_SIZE * ...
-#TODO: finish comment
-
-
 # configure the data creator/loader
 load_data.Dataset.game_type = 'Hanabi-Full'
 load_data.Dataset.num_players = 2
 load_data.Dataset.num_unique_agents = 1
 load_data.Dataset.num_games = 10
 
+# load specific agent for testing
 load_data.generator.agent='rainbow_agent_6'
 
-# configure the trainer
+# configure trainer optimizer
 train.Trainer.optimizer = @keras.optimizers.Adam()
 keras.optimizers.Adam.lr=0.001
 keras.optimizers.Adam.beta_1=0.9
@@ -27,6 +21,7 @@ keras.optimizers.Adam.epsilon=None
 keras.optimizers.Adam.decay=0.0
 keras.optimizers.Adam.amsgrad=True
 
+# configure trainer vars
 train.Trainer.loss = 'categorical_crossentropy'
 train.Trainer.metrics = ['accuracy']
 train.Trainer.batch_size = 32
@@ -42,4 +37,4 @@ build_model.build_model.out_layer_nodes = 20
 build_model.build_model.out_activation = 'softmax'
 
 
-# configure the evaluator
+# TODO: configure the evaluator
