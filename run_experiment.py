@@ -3,7 +3,6 @@ from subprocess import call
 import tensorflow as tf
 import numpy as np
 import load_data
-import functional_model
 import train
 import evaluate
 import gin
