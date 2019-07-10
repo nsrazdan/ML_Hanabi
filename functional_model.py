@@ -41,7 +41,7 @@ class Naive_MLP(object):
     def train_model(self, optimizer=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False), 
             loss ='sparse_categorical_crossentropy',
             metrics=['accuracy'],
-            epochs=100,
+            epochs=10,
             batch_size=10):
         
         #obtain input and output layer to create the model

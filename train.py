@@ -14,12 +14,16 @@ class Trainer(object):
                  loss=None,
                  metrics=None,
                  batch_size=None,
-                 epochs=None):
+                 epochs=None,
+                 steps_per_epoch=None,
+                 validation_steps=None):
         self.optimizer = optimizer
         self.loss = loss
         self.metrics = metrics
         self.batch_size = batch_size
         self.epochs = epochs
+        self.steps_per_epoch = steps_per_epoch
+        self.validation_steps = validation_steps
 
 def main(train_obs, train_act, valid_obs, valid_act, args):
     trainer = Trainer(args)
@@ -39,7 +43,10 @@ def main(train_obs, train_act, valid_obs, valid_act, args):
     tr_history = model.fit(train_obs, train_act,
             epochs = trainer.epochs,
             verbose = 1,
-            validation_data=(valid_obs,valid_act))
+            validation_data=(valid_obs,valid_act),
+            steps_per_epoch = trainer.steps_per_epoch,
+            validation_steps = trainer.validation_steps)
+            
 
     return model
 
