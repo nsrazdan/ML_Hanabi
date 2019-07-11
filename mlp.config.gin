@@ -10,7 +10,7 @@ load_data.Dataset.num_unique_agents = 1
 load_data.Dataset.num_games = 10
 
 # load specific agent for testing
-load_data.generator.agent='rainbow_agent_6'
+load_data.generator.agent='rainbow_agent_1'
 
 # configure trainer optimizer
 train.Trainer.optimizer = @keras.optimizers.Adam()
@@ -32,7 +32,7 @@ train.Trainer.validation_steps = 1
 # configure the network
 build_model.build_model.obs_size = 658
 build_model.build_model.num_hidden_nodes = [560,480,320.256,128,64]
-build_model.build_model.hidden_activation = 'relu' #@keras.layers.LeakyReLU()
+build_model.build_model.hidden_activation = @keras.layers.LeakyReLU()
 build_model.build_model.out_layer_nodes = 20
 build_model.build_model.out_activation = 'softmax'
 build_model.build_model.dropout_rate = 0.2
