@@ -11,7 +11,7 @@ from utils import parse_args, dir_utils
 # getting rid of "does not support AVX" warnings and info logs
 logging.getLogger('tensorflow').disabled = True
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 # CONST VARIABLES
 DATAPATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -33,6 +33,7 @@ def main():
 
     # external configuration
     gin.external_configurable(tf.keras.optimizers.Adam, module='tensorflow.keras.optimizers')
+    gin.external_configurable(tf.keras.layers.LeakyReLU, module='tensorflow.keras.layers')
     gin.parse_config_file('mlp.config.gin')
 
     # get data, train model, then test model

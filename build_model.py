@@ -1,7 +1,7 @@
 import tensorflow as tf
 import gin
 from keras.optimizers import Adam
-from tensorflow.keras.layers import Input, Dense, Flatten, Dropout
+from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, BatchNormalization
 from tensorflow.keras.models import Model
 
 def print_info(obs_size, num_hidden_nodes, hidden_activation, out_layer_nodes, out_activation):
@@ -29,8 +29,6 @@ def build_model(obs_size=None,
     for i in range(1,len(num_hidden_nodes)):
         hidden_liayer = Dense(num_hidden_nodes[i], activation=hidden_activation)(hidden_layer)
         hidden_layer = Dropout(rate=dropout_rate)(hidden_layer)
-    #flatten_layer = Flatten()(hidden_layer)
-    
     #setting up output layer
     output_layer = Dense(out_layer_nodes, activation = out_activation)(hidden_layer)
     #build the model
